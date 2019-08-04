@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorPlomoOficialEmpresaAl25PorCiento">
+
+    <RelativeLayout
+        android:id="@+id/camara_rlayoutContenedor"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPlomoOficialEmpresaAl75PorCiento"
+        android:visibility="gone">
+        <!--botones foto ok y repetir foto de imagen previa android:gravity="center_vertical"-->
+        <RelativeLayout
+            android:id="@+id/camara_rlayoutAceptarCancelar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:paddingTop="18dp"
+            android:paddingBottom="18dp"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp"
+            android:background="@color/colorPlomoOficialEmpresaAl75PorCiento"
+            android:visibility="gone">
+            <!--foto ok -->
+            <LinearLayout
+                android:id="@+id/camara_layoutConfirmar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal"
+                android:layout_alignParentLeft="true"
+                android:background="@drawable/layout_as_a_button_color_blanco"
+                android:clickable="true">
+                <ImageButton
+                    android:id="@+id/camara_imgvConfirmar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_check"
+                    android:background="@color/colorTransparent"/>
+            </LinearLayout>
+            <!--foto eliminar -->
+            <LinearLayout
+                android:id="@+id/camara_layoutEliminar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/layout_as_a_button_color_blanco"
+                android:clickable="true">
+                <ImageButton
+                    android:id="@+id/camara_imgvEliminar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_eliminar"
+                    android:background="@color/colorTransparent"/>
+            </LinearLayout>
+        </RelativeLayout>
+        <!--imagen previa android:adjustViewBounds="true" android:background="@color/colorAmarilloOficialEmpresa android:src="@mipmap/ic_launcher"" -->
+
+        <com.davemorrissey.labs.subscaleview.SubsamplingScaleImageView
+            android:id="@+id/camara_ImgvImagenPrevia"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_above="@+id/camara_rlayoutAceptarCancelar"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+    <!--TextureView donde aparece la camara-->
+    <com.camera2.cibertec.camara2.AutoFitTextureView
+        android:id="@+id/camara_TextureViewTexture"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="center_horizontal"/>
+
+    <!--android:layout_alignParentBottom="true"-->
+    <!--numero de guia y boton camara-->
+    <FrameLayout
+        android:id="@+id/camara_FrameLayoutTomarFoto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:background="@color/colorPlomoOficialEmpresaAl75PorCiento">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/colorPlomoOficialEmpresaAl75PorCiento"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal|center_vertical">
+            <TextView
+                android:id="@+id/camara_txtNro_guia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/camara_texto_padding_bottom"
+                android:background="@color/colorPlomoOficialEmpresaAl75PorCiento"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/camara_texto_size"
+                android:text="" />
+
+            <LinearLayout
+                android:id="@+id/camara_layoutCamaraTomarFoto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal"
+                android:background="@drawable/layout_as_a_button_color_blanco"
+                android:paddingTop="@dimen/menu_layout_opciones_margen"
+                android:paddingBottom="@dimen/menu_layout_opciones_margen"
+                android:clickable="true">
+                <ImageView
+                    android:id="@+id/camara_imgvCamaraTomarFoto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorTransparent"
+                    android:src="@drawable/ic_camera"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:clickable="true" />
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+
+</LinearLayout>

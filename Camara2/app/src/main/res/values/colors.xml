@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+
+    <!--<color name="colorVerdeOficialEmpresa">#007C31</color>-->
+    <color name="colorVerdeOficialEmpresa">#E6666B</color>
+    <color name="colorVerdeOficialEmpresaAl75PorCiento">#409d64</color>
+    <color name="colorFondoOficialEmpresa">#366996</color>
+    <color name="colorPlomoOficialEmpresa">#3b3b3a</color>
+    <color name="colorAmarilloOficialEmpresa">#ffd400</color>
+    <color name="colorRojoOficialEmpresa">#e63121</color>
+    <color name="colorPlomoOficialEmpresaAl75PorCiento">#757574</color>
+    <color name="colorPlomoOficialEmpresaAl25PorCiento">#d4d5d5</color>
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorTransparent">#00000000</color>
+    <color name="colorGray">#a8a8a8</color>
+
+    <color name="control_background">#cc4285f4</color>
+    <color name="colorPlomo600">#757575</color>
+    <color name="colorPlomo700">#616161</color>
+    <color name="colorPlomo800">#424242</color>
+
+    <color name="colorVerde200">#A5D6A7</color>
+
+    <!--<color name="colorCoral">#e52d38</color>-->
+    <color name="colorCoral">#E6666B</color>
+    <color name="colorCoralAl75PorCiento">#ff525a</color>
+</resources>

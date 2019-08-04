@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:drawable="@color/colorCoral"/>
+
+    <item>
+        <bitmap
+            android:gravity="center"
+            android:src="@drawable/scharff_logowhite"/>
+    </item>
+
+    <item android:top="130dp">
+        <bitmap
+            android:gravity="center"
+            android:src="@drawable/footer_text_min"
+            />
+    </item>
+
+</layer-list>

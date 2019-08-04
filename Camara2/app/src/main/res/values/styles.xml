@@ -1,0 +1,184 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="ThemeAppRecojo" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+
+        <item name="colorPrimary">@color/colorWhite</item>
+        <item name="colorPrimaryDark">@color/colorAccent</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+    </style>
+
+    <!--LOGIN Floating label text style-->
+    <style name="MyHintText" parent="TextAppearance.AppCompat.Small">
+        <item name="android:textColor">@color/colorCoral</item>
+    </style>
+
+
+    <!-- PROPIEDADES GENERICAS DEL TOOLBAR -->
+    <!-- Estilo de menu del toolbar-->
+    <style name="ToolbarPopupGeneral" parent="ThemeOverlay.AppCompat.Light">
+        <item name="android:background">@color/colorWhite</item>
+    </style>
+    <!-- seteo de propiedades del toolbar General-->
+    <style name="ToolbarGeneral" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="android:background">@color/colorCoral</item>
+        <item name="titleTextColor">@color/colorWhite</item>
+    </style>
+
+    <!-- MENU TOOLBAR -->
+    <!-- seteo de propiedades del toolbar del Menu-->
+    <style name="ToolbarMenu" parent="ToolbarGeneral">
+        <item name="navigationIcon">@drawable/regresar</item>
+        <item name="actionOverflowButtonStyle">@style/OverFlowMenuDelMenu</item>
+        <!-- estilo del icono menu del toolbar-->
+        <item name="android:actionOverflowButtonStyle">@style/OverFlowMenuDelMenu</item>
+        <!-- estilo del icono menu del toolbar-->
+    </style>
+
+    <!-- Estilo del icono del toolbar-->
+    <style name="OverFlowMenuDelMenu" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="android:src">@drawable/menu_overflow</item>
+        <item name="colorAccent">@color/colorCoral</item>
+        <!-- truco para que no cambie el tono del color-->
+    </style>
+    <!-- Estilo del menu del toolbar-->
+    <style name="ToolbarPopupMenu" parent="ToolbarPopupGeneral"></style>
+
+
+    <!-- LISTA RECOJOS TOOLBAR -->
+    <!-- seteo de propiedades del toolbar -->
+    <style name="ToolbarListaRecojo" parent="ToolbarGeneral">
+        <item name="navigationIcon">@drawable/regresar</item>
+        <item name="actionOverflowButtonStyle">@style/OverFlowMenu</item>
+        <!-- estilo del icono menu del toolbar-->
+        <item name="android:actionOverflowButtonStyle">@style/OverFlowMenu</item>
+        <!-- estilo del icono de navegacion del toolbar-->
+        <item name="toolbarNavigationButtonStyle">@style/myToolbarNavigationButtonStyle</item>
+
+    </style>
+
+    <!-- Estilo del icono del toolbar
+        <item name="android:minWidth">0dp</item>
+        <item name="android:padding">12dp</item>
+        <item name="android:scaleType">centerInside</item>-->
+    <style name="OverFlowMenu" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="android:src">@drawable/ordenar_white</item>
+    </style>
+
+    <!-- Estilo del icono de navegacion del toolbar-->
+    <style name="myToolbarNavigationButtonStyle" parent="@style/Widget.AppCompat.Toolbar.Button.Navigation">
+        <item name="android:background">@color/colorTransparent</item>
+    </style>
+
+    <!-- Estilo del menu del toolbar Lista entrega-->
+    <style name="ToolbarListaEntrega" parent="ToolbarGeneral">
+        <item name="navigationIcon">@drawable/regresar</item>
+
+        <item name="actionOverflowButtonStyle">@style/OverFlowMenuListaEntregas</item>
+
+        <!-- estilo del icono menu del toolbar-->
+        <item name="android:actionOverflowButtonStyle">@style/OverFlowMenuListaEntregas</item>
+        <!-- estilo del icono menu del toolbar-->
+        <item name="android:background">@color/colorCoral</item>
+        <item name="popupTheme">@style/ToolbarPopupGeneral</item>
+        <item name="titleTextAppearance">@style/Toolbar_Title</item>
+    </style>
+
+    <!-- Estilo del icono del toolbar ThemeOverlay.AppCompat.Dark.ActionBar-->
+    <style name="OverFlowMenuListaEntregas" parent="android:style/Widget.Holo.Light.ActionButton.Overflow">
+        <item name="android:src">@drawable/ordenar_white</item>
+    </style>
+
+    <style name="Toolbar_Title">
+        <item name="android:background">@color/colorAmarilloOficialEmpresa</item>
+    </style>
+
+    <style name="AppThemex" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:actionOverflowButtonStyle">@style/ActionButton.Overflow.Icon</item>
+    </style>
+
+    <style name="ActionButton.Overflow.Icon" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="android:src">@drawable/ordenar_white</item>
+    </style>
+
+    <!-- Estilo del menu del toolbar-->
+    <style name="ToolbarPopupListaRecojo" parent="ToolbarPopupGeneral"></style>
+
+    <style name="AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <!-- Estilo del Splash-->
+    <style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash_background</item>
+    </style>
+
+    <!-- Estilo algunos Alert Dialog-->
+    <style name="MyAlertDialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:background">@color/colorWhite</item>
+    </style>
+
+    <!-- Estilo botton flotante-->
+    <style name="BotonFlotante">
+        <item name="android:layout_marginLeft">0dp</item>
+        <item name="android:layout_marginTop">0dp</item>
+        <item name="android:layout_marginRight">8dp</item>
+        <item name="android:layout_marginBottom">0dp</item>
+        <item name="colorAccent">@color/colorCoral</item>
+    </style>
+
+    <style name="myStyle" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <item name="android:spinnerDropDownItemStyle">@style/SpinnerItem_example</item>
+    </style>
+    <!--<item name="android:spinnerStyle">@style/customtheme</item>-->
+    <!--<style name="spinnerStyle"  parent="@android:style/Widget.Holo.Light.Spinner">
+        <item name="android:spinnerItemStyle">@style/SpinnerItem_example</item>
+        <item name="android:textColor">@color/colorAmarilloOficialEmpresa</item>
+
+    </style>-->
+    <style name="SpinnerItem_example" parent="@android:style/Widget.Holo.Light.Spinner">
+        <item name="android:textColor">@color/colorAmarilloOficialEmpresa</item>
+    </style>
+
+    <style name="customtheme" parent="@android:style/Widget.Holo.Light.Spinner">
+
+    </style>
+
+    <style name="mySpinnerItemStyle" parent="@android:style/Widget.Holo.Light.Spinner">
+        <item name="android:background">@color/colorWhite</item>
+        <item name="android:spinnerDropDownItemStyle">@style/SpinnerDropDownItem</item>
+    </style>
+
+    <style name="SpinnerDropDownItem">
+        <item name="android:foreground">@color/colorRojoOficialEmpresa</item>
+        <item name="android:background">@color/colorPlomoOficialEmpresaAl25PorCiento</item>
+    </style>
+
+    <style name="spinnerDropDownItemStyle" parent="android:TextAppearance.Widget.TextView.SpinnerItem">
+
+    </style>
+
+
+    <style name="SpinnerItem">
+        <item name="android:textColor">@color/colorAmarilloOficialEmpresa</item>
+        <item name="android:background">@color/colorPlomoOficialEmpresaAl25PorCiento</item>
+    </style>
+
+
+    <style name="spinnerItemStyle" parent="android:Widget.TextView.SpinnerItem"></style>
+
+    <!--<item name="android:spinnerItemStyle">@style/SpinnerItem</item>
+    <item name="android:spinnerDropDownItemStyle">@style/SpinnerDropDownItem</item>-->
+    <!--<item name="android:spinnerItemStyle">@style/SpinnerItem</item>
+    <item name="android:spinnerDropDownItemStyle">@style/SpinnerDropDownItem</item> &ndash;&gt;-->
+</resources>
+

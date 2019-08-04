@@ -1,0 +1,456 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/colorWhite"
+    android:fitsSystemWindows="false">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_registro_entrega"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="4dp"
+        android:theme="@style/ToolbarMenu"
+
+        android:popupTheme="@style/ToolbarPopupMenu">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/reg_entrega_toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorTransparent"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/toolbar_title_size"
+
+                />
+
+        </LinearLayout>
+
+
+    </android.support.v7.widget.Toolbar>
+    <!--tipo, lugar, recepcionado por, dni, observacion, guia , imagenes adicionar guia-->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:gravity="top"
+        android:background="@color/colorWhite">
+        <!--tipo, lugar-->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="4dp"
+            android:paddingRight="2dp"
+            android:paddingBottom="0dp"
+            android:paddingTop="10dp"
+            android:layout_alignParentLeft="true"
+            android:weightSum="1"
+            >
+            <!--tipo-->
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:weightSum="1">
+                <!--tipo-->
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".5"
+                    >
+                    <TextView
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorPlomoOficialEmpresa"
+                        android:textSize="@dimen/tamanio_letra_smallx"
+                        android:text="Tipo"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:visibility="gone"
+                        />
+                </LinearLayout>
+                <!--lugar-->
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorCoral"
+                        android:textSize="@dimen/tamanio_letra_small"
+                        android:text="A quién le entregué?"
+                        android:visibility="gone"
+                        android:layout_gravity="center_horizontal|center_vertical" />
+                </LinearLayout>
+            </LinearLayout>
+            <!--lugar-->
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Spinner
+                    android:id="@+id/reg_entrega_spinner_tipo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:spinnerMode="dialog"
+                    style="@android:style/Widget.Holo.Light.Spinner"
+                    android:visibility="gone"
+                    />
+                <Spinner
+                    android:id="@+id/reg_entrega_spinner_lugar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:spinnerMode="dialog"
+                    style="@android:style/Widget.Holo.Light.Spinner"
+                    android:visibility="gone"/>
+            </LinearLayout>
+        </LinearLayout>
+        <!--recibido por y DNI-->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingLeft="0dp"
+            android:paddingRight="0dp"
+            android:paddingBottom="2dp"
+            android:gravity="center">
+            <!--recibido por-->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                >
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/reg_entrega_InputLayout_recibidoPor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="8dp"
+                    android:layout_marginLeft="0dp"
+                    app:hintTextAppearance="@style/MyHintText"
+                    android:visibility="gone"
+                    >
+                    <EditText
+                        android:id="@+id/reg_entrega_etxt_recibidoPor"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Firma como"
+                        android:layout_marginLeft="2dp"
+                        android:paddingTop="0dp"
+                        android:singleLine="true"
+                        android:drawablePadding="10dp"
+                        android:maxLines="1"
+                        android:maxLength="30"
+                        android:visibility="gone"
+                        />
+                </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
+            <!--dni-->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.2"
+
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+               >
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/reg_entrega_InputLayout_dni"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="8dp"
+                    android:layout_marginLeft="0dp"
+                    app:hintTextAppearance="@style/MyHintText"
+                    android:visibility="gone"
+                    >
+                    <EditText
+                        android:id="@+id/reg_entrega_etxt_dni"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/reg_entrega_dni_texto_hint"
+                        android:layout_marginLeft="0dp"
+                        android:paddingTop="0dp"
+                        android:paddingLeft="4dp"
+                        android:singleLine="true"
+                        android:maxLines="1"
+                        android:maxLength="30"
+                        android:visibility="gone"
+                        />
+                </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <!--observacion-->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:gravity="bottom"
+                >
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/reg_entrega_InputLayout_observacion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="8dp"
+                    android:layout_marginLeft="2dp"
+                    app:hintTextAppearance="@style/MyHintText"
+                    android:visibility="gone"
+                    >
+                    <EditText
+                        android:id="@+id/reg_entrega_etxt_observacion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="0dp"
+                        android:hint="@string/reg_entrega_observacion_texto_hint"
+                        android:scrollbars="vertical"
+                        android:ems="10"
+                        android:singleLine="true"
+                        android:maxLines="2"
+                        android:maxLength="100"
+                        android:visibility="gone"/>
+                    <!--android:inputType="textMultiLine"-->
+                    <!--android:layout_gravity="top"
+                    android:gravity="top"
+                    android:background="@drawable/edit_text_style"-->
+                </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
+        </ScrollView>
+        <!--guia y adicionar guia-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="0dp"
+            android:paddingRight="2dp"
+            android:paddingTop="0dp"
+            android:descendantFocusability="beforeDescendants">
+            <RelativeLayout
+                android:id="@+id/lista_entregas_toolbar_relative_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="0dp">
+                <!--guia e imagen de agregar guia-->
+                <LinearLayout
+                    android:id="@+id/reg_entrega_layout_guia_agregar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_alignParentLeft="true"
+                    android:visibility="visible">
+                    <!--guia-->
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:hint=" ">
+                        <EditText
+                            android:id="@+id/reg_entrega_etxt_guia"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:hint="@string/reg_entrega_guia_texto_hint"
+                            android:paddingTop="0dp"
+                            android:ems="8"
+                            android:singleLine="true"
+                            android:maxLines="1"
+                            android:maxLength="25" />
+
+                    </android.support.design.widget.TextInputLayout>
+                    <!--agregar guia-->
+                    <LinearLayout
+                        android:id="@+id/reg_entrega_layoutAgregarGuia"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:gravity="left">
+                        <ImageView
+                            android:id="@+id/reg_entrega_agregar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_agregar"
+                            android:layout_gravity="center_vertical"
+                            android:clickable="true" />
+                    </LinearLayout>
+                </LinearLayout>
+                <!--opcion escanear guias y escoger de lista-->
+                <LinearLayout
+                    android:id="@+id/reg_entrega_layout_guia_escanear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/reg_entrega_layout_guia_agregar"
+                    android:layout_marginLeft="23dp"
+                    android:visibility="visible">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="0dp">
+                        <LinearLayout
+                            android:id="@+id/reg_entrega_layoutAgregarGuiaPorLista"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:orientation="horizontal"
+                            android:layout_alignParentLeft="true"
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:id="@+id/reg_entrega_agregar_guia_por_lista"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:clickable="true"
+                                android:src="@drawable/lista_documentos_sin_borde_verde" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:id="@+id/reg_entrega_layoutAgregarGuiaPorEscaner"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:orientation="horizontal"
+                            android:layout_alignParentRight="true"
+                            android:gravity="left">
+                            <ImageView
+                                android:id="@+id/reg_entrega_agregar_guia_por_escaner"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_toRightOf="@+id/reg_entrega_agregar_guia_por_lista"
+                                android:src="@drawable/ic_barcorde"
+                                android:clickable="true"
+                                android:visibility="gone"/>
+                        </LinearLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+
+
+
+            </RelativeLayout>
+
+
+
+        </LinearLayout>
+        <!--fotos-->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:paddingTop="10dp"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorCoral"
+                android:textSize="@dimen/tamanio_letra_small"
+                android:text="Con las siguientes guías"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <!--lista de guias-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/colorWhite"
+        android:layout_gravity="top"
+        android:gravity="center_horizontal|top"
+        android:paddingTop="15dp"
+        android:paddingLeft="18dp"
+        android:paddingRight="18dp"
+        android:paddingBottom="18dp"
+        android:layout_weight="4">
+
+        <ListView
+            android:id="@+id/reg_entrega_listaGuias"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:cacheColorHint="#00000000"
+            android:divider="@color/colorVerdeOficialEmpresa"
+            android:dividerHeight="0.5dp"
+            android:background="@drawable/listview_border_registro_ingreso"
+            android:layout_weight="1">
+        </ListView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="end">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPlomoOficialEmpresa"
+                android:textSize="@dimen/toolbar_title_size"
+                android:text="Total : " />
+            <TextView
+                android:id="@+id/reg_entrega_cantidad_guias"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPlomoOficialEmpresa"
+                android:textSize="@dimen/toolbar_title_size"
+                android:text="0" />
+        </LinearLayout>
+    </LinearLayout>
+    <!--boton aceptar-->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+
+        android:background="@color/colorWhite"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="16dp"
+            android:paddingBottom="8dp"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp">
+            <Button
+                android:id="@+id/reg_entrega_btnGuardar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_enviar_texto"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/button_oval_style"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/toolbar_title_size"
+                android:textAllCaps="false"
+                />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

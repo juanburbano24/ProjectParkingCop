@@ -1,0 +1,78 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_horizontal_left_margin">16dp</dimen>
+    <dimen name="activity_horizontal_right_margin">0dp</dimen>
+    <dimen name="activity_vertical_margin">1dp</dimen>
+
+    <dimen name="fragment_toolbar_top_padding">0dp</dimen>
+    <dimen name="fragment_toolbar_left_padding">0dp</dimen>
+    <dimen name="fragment_toolbar_right_padding">0dp</dimen>
+    <dimen name="fragment_horizontal_right_margin">0dp</dimen>
+    <dimen name="fragment_vertical_margin">1dp</dimen>
+    <dimen name="toolbar_title_size">16dp</dimen>
+    <dimen name="table_title_size">13dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="texto_titulo_listview_size">14dp</dimen>
+    <!-- LOGIN -->
+    <dimen name="login_textsize_empresa">48dp</dimen>
+
+    <!-- MENU -->
+    <dimen name="menu_nombre_usuario_text_size">14dp</dimen>
+    <dimen name="menu_layout_opciones_margen">8dp</dimen>
+    <dimen name="menu_layout_division_opciones_margen">10dp</dimen>
+    <dimen name="menu_lista_opciones_margen_izquierdo">50dp</dimen>
+    <dimen name="menu_textview_en_lista_opciones_margen_izquierdo">4dp</dimen>
+    <dimen name="menu_separacion_icono_entrega_y_recojo_tamanio">50dp</dimen>
+    <dimen name="menu_titulo_textsize">20dp</dimen>
+
+    <!-- RECOJO -->
+    <!-- LISTA DE RECOJOS -->
+    <!-- LISTVIEW -->
+    <dimen name="listview_in_fragment_toolbar_horizontal_right_margin">0dp</dimen>
+    <dimen name="listview_in_fragment_toolbar_horizontal_left_margin">16dp</dimen>
+    <dimen name="listview_in_fragment_toolbar_horizontal_vertical_margin">1dp</dimen>
+    <dimen name="listview_in_fragment_toolbar_padding_top">2dp</dimen>
+    <dimen name="lista_recojo_list_view_paddingTop">6dp</dimen>
+    <dimen name="lista_recojo_list_view_paddingBottom">8dp</dimen>
+    <dimen name="lista_recojo_list_view_paddingLeft">0dp</dimen>
+    <dimen name="lista_recojo_list_view_scrollbarSize">1dp</dimen>
+    <dimen name="fila_principal_text_size">16dp</dimen>
+    <dimen name="fila_secundaria_text_size">14dp</dimen>
+    <dimen name="tamanio_caracter_separacion_horas">1dp</dimen>
+    <dimen name="tamanio_caracter_separacion_distrito">6dp</dimen>
+
+    <!-- REGISTRO DE RECOJOS -->
+    <dimen name="reg_recojo_button_scaneo_padding_left">72dp</dimen>
+
+    <!-- DETALLE RECOJO (cindy) -->
+    <dimen name="tamanio_separacion_small">10dp</dimen>
+    <dimen name="tamanio_letra_small">14dp</dimen>
+    <dimen name="tamanio_letra_smallx">12dp</dimen>
+    <dimen name="tamanio_letra_small_13dp">13dp</dimen>
+
+    <dimen name="det_recojo_opciones_text_size">14dp</dimen>
+    <dimen name="det_recojo_layout_opciones_margen">7dp</dimen>
+    <dimen name="det_recojo_layout_division_opciones_margen">10dp</dimen>
+    <dimen name="det_recojo_lista_opciones_margen_izquierdo">30dp</dimen>
+    <dimen name="det_recojo_botones_margen_izquierdo_y_derecho">20dp</dimen>
+    <dimen name="det_recojo_textview_en_lista_opciones_margen_izquierdo">4dp</dimen>
+
+    <!-- DETALLE ENTREGA -->
+    <dimen name="det_entrega_opciones_text_size">14dp</dimen>
+    <dimen name="det_entrega_layout_opciones_margen">7dp</dimen>
+    <dimen name="det_entrega_layout_division_opciones_margen">10dp</dimen>
+    <dimen name="det_entrega_lista_opciones_margen_izquierdo">30dp</dimen>
+    <dimen name="det_entrega_botones_margen_izquierdo_y_derecho">20dp</dimen>
+    <dimen name="det_entrega_toolbar_botones_margen_izquierdo_y_derecho">12dp</dimen>
+    <dimen name="det_entrega_textview_en_lista_opciones_margen_izquierdo">4dp</dimen>
+
+    <!-- CAMARA -->
+    <dimen name="camara_texto_size">18dp</dimen>
+    <dimen name="camara_texto_padding_bottom">4dp</dimen>
+    <!-- elocker control recojo  -->
+    <dimen name="cantidad_verificado_total_size">30dp</dimen>
+
+
+</resources>
